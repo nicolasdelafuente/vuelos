@@ -1,4 +1,4 @@
-package vuelosPQ;
+package vuelos;
 
 import java.io.IOException;
 

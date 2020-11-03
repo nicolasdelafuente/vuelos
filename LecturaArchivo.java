@@ -1,4 +1,4 @@
-package vuelosPQ;
+package vuelos;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -16,8 +16,8 @@ public class LecturaArchivo {
     /**
      * Cambiar ubicacion archivo txt de Aeropuertos y Vuelos
      */
-    static String ArchivoDeAeropuertos_TXT = "vuelosPQ/aeropuertos.txt";
-    static String ArchivoDeVuelos_TXT = "vuelosPQ/vuelos.txt";
+    static String ArchivoDeAeropuertos_TXT = "vuelos/aeropuertos.txt";
+    static String ArchivoDeVuelos_TXT = "vuelos/vuelos.txt";
 	  private static PriorityQueue<String> pq = new PriorityQueue<>();
 	 
     

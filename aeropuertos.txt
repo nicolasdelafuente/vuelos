@@ -5,4 +5,3 @@ JFK Aeropuerto-Internacional-John-F.-Kennedy New-York EEUU 70.61 4 10 2
 MIA Miami-International-Airport Miami EEUU 54 6 245 143
 GIG Aeropuerto-Internacional-de-Galeno Rio-de-Janeiro Brasil 21.55 4 1 9
 GRU Guarulos Sao-Paulo Brasil 12 6 8 12
-PEP gfdg gfdgfdh hfhdfh 34 545 6 6

@@ -1,4 +1,4 @@
-package vuelosPQ;
+package vuelos;
 
 import java.util.ArrayList;
 import java.util.List;
