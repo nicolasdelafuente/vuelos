@@ -35,7 +35,9 @@ public class MenuPrincipal {
             System.out.println("2. Dar de alta aeropuerto");
             System.out.println("3. Dar de baja aeropuerto");
             System.out.println("4. Mostrar todos los aeropuertos (ordenados por código IATA)");
-            System.out.println("5. Salir");
+            System.out.println("5. Busqueda de vuelos por ruta mas corta");
+            System.out.println("6. Busqueda de vuelos por ruta mas barata");
+            System.out.println("7. Salir");
 
             try {
 
@@ -79,10 +81,22 @@ public class MenuPrincipal {
                         //clearScreen();
                         break;
                     case 5:
+                        System.out.println("5. Busqueda de vuelos por ruta mas corta");    
+
+                        pressEnterParaMenu();
+                        clearScreen();
+                        break;
+                    case 6:
+                        System.out.println("6. Busqueda de vuelos por ruta mas barata");    
+
+                        pressEnterParaMenu();
+                        clearScreen();
+                        break;
+                    case 7:
                         salir = true;
                         break;
                     default:
-                        System.out.println("Solo números entre 1 y 5");
+                        System.out.println("Solo números entre 1 y 7");
                         pressEnterParaMenu();
                         clearScreen();
                 }
