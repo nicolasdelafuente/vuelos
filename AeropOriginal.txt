@@ -1,0 +1,6 @@
+EZE Ministro-Pistarini Ezeiza Argentina 34.75 4 12 46
+LAX Aeropuerto-Internacional-de-los-Angeles Los-Angeles EEUU 14 9 87 69
+LIM Aeropuerto-Internacional-Jorge-Chavez Lima Peru 30.13 5 5 5
+GIG Aeropuerto-Internacional-de-Galeão Rio-de-Janeiro Brasil 21.55 4 1 9
+JFK Aeropuerto-Internacional-John-F.-Kennedy New-York EEUU 70.61 4 10 2
+GRU Sao Paulo, Brasil 
