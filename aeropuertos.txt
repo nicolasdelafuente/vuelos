@@ -7,3 +7,4 @@ LAX Aeropuerto-Internacional-de-los-Angeles Los-Angeles EEUU 14 9 87 69
 LIM Aeropuerto-Internacional-Jorge-Chavez Lima Peru 30.13 5 5 5
 
 TRE Tres de Febrero Palomar fdsf fsd dsf
+RER Rer-Internation CityRer PaisRER 65 34 65 120
