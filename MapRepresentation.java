@@ -1,39 +1,42 @@
 package vuelos;
 
+import java.io.IOException;
+
+
+
 public class MapRepresentation {
  
-    public static Graph getCities() 
+    public static Graph getCities() throws IOException 
     {
-        Node EZE = new Node("Ezeiza");
-        Node MIA = new Node("Miami");
-        Node GRU = new Node("Sao Paulo");
-        Node LAX = new Node("Los Angeles");
-        Node JFK = new Node("New York");
- 
-        EZE.addEdge(new Edge(EZE, MIA, 9.2));
-        EZE.addEdge(new Edge(EZE, GRU, 3));
-        EZE.addEdge(new Edge(EZE, LAX, 11));
-        EZE.addEdge(new Edge(EZE, JFK, 10));
+        LoadFlights.load();
+        // for(Edge edge : LoadFlights.getFlights())
+        //     System.out.println(edge);
+        // for(Node node : LoadFlights.getNodes())
+        //     System.out.println(node);
+        for(Node node: LoadFlights.getNodes()){
+            for(Edge edge: LoadFlights.getFlights()){
+                if(node.equals(edge.getOrigin())){
+                    node.addEdge(edge);
+                }
+            }
+        }
 
-        MIA.addEdge(new Edge(MIA, JFK, 2));
-        MIA.addEdge(new Edge(MIA, GRU, 6));
-        MIA.addEdge(new Edge(MIA, LAX, 5));
+        for(Node node: LoadFlights.getNodes()){
+            System.out.println(node);
+        }
 
-        GRU.addEdge(new Edge(GRU, LAX, 8));
-        LAX.addEdge(new Edge(LAX, JFK, 4));
-
- 
-        Graph graph = new Graph();
-        graph.addNode(EZE);
-        graph.addNode(MIA);
-        graph.addNode(GRU);
-        graph.addNode(LAX);
-        return graph;
+        // Graph graph = new Graph();
+        // graph.addNode(EZE);
+        // graph.addNode(MIA);
+        // graph.addNode(GRU);
+        // graph.addNode(LAX);
+        // return graph;
+        return null;
     }
  
-    public static void main(String[] args) 
+    public static void main(String[] args) throws IOException 
     {
         Graph graph = getCities();
-        System.out.println(graph);
+        //System.out.println(graph);
     }
 }

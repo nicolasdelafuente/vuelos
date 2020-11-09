@@ -46,5 +46,22 @@ public class Node
 	{
 		return "\n \tNode [city=" + city + ", edges=" + edges + "]";
 	}
+
+	@Override
+	public boolean equals(Object o)
+	{
+		if ( o instanceof Node ){
+			Node node = (Node)o;
+			return node.getCity().equals(this.city);
+		} else{
+			return false;
+		}
+	}
+
+	@Override
+	public int hashCode()
+	{
+		return this.city.hashCode();
+	}
 }
 
