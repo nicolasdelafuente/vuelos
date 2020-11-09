@@ -11,7 +11,7 @@ import java.util.List;
 public class LoadFlights {
 	private static final String FLIGHTS_FILE = "vuelos/vuelos.txt";
 	private static List<Edge>flights = new ArrayList<>();
-	private static List<Node>nodes = new ArrayList<>();
+	private static List<Vertex>vertex = new ArrayList<>();
 	
 	public static void load() throws IOException {
 		BufferedReader in = new BufferedReader(new FileReader(FLIGHTS_FILE));
@@ -20,18 +20,20 @@ public class LoadFlights {
 		
         while ((line = in.readLine()) != null) {
         	
-        	String lineValues[] = line.split(" ");
+			String lineValues[] = line.split(" ");
+			Vertex source = new Vertex(lineValues[0]);
+			Vertex destination = new Vertex(lineValues[1]);
 			double cost = Double.parseDouble(lineValues[2]);
 			double hours = Double.parseDouble(lineValues[3]);
-			Node source = new Node(lineValues[0]);
-			Node destination = new Node(lineValues[1]);
+			System.out.println(source + " " + destination + " " + cost + " " + hours);
+
 			
-			Edge flight = new Edge(source, destination, 0, cost, hours);
+			Edge flight = new Edge(source, destination, cost, hours);
 			flights.add(flight);
-			if (!nodes.contains(source)){
-				nodes.add(source);
-			} else if (!nodes.contains(destination)){
-				nodes.add(destination);
+			if (!vertex.contains(source)){
+				vertex.add(source);
+			} else if (!vertex.contains(destination)){
+				vertex.add(destination);
 				}
 			
 
@@ -47,12 +49,12 @@ public class LoadFlights {
 		LoadFlights.flights = flights;
 	}
 
-	public static List<Node> getNodes() {
-		return nodes;
+	public static List<Vertex> getVertex() {
+		return vertex;
 	}
 
-	public static void setNodes(List<Node> nodes) {
-		LoadFlights.nodes = nodes;
+	public static void setVertex(List<Vertex> vertexs) {
+		LoadFlights.vertex = vertexs;
 	}
 
 
